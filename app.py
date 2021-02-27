@@ -20,7 +20,6 @@ identitas = {} # variable global  , dictionary = json
 class ContohResource(Resource):
     # metode get dan post 
     def get(self):
-        # response = {"msg":"Hallo dunia, ini app restful pertamaku"}
         return identitas 
 
     def post(self):
@@ -32,7 +31,7 @@ class ContohResource(Resource):
         return response
 
 # setup resourcenya 
-api.add_resource(ContohResource, "/api", methods=["GET", "POST"])
+api.add_resource(ContohResource, "/", methods=["GET", "POST"])
 
 if __name__ == "__main__":
     app.run(debug=True, port=5005)
